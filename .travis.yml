@@ -5,7 +5,7 @@ arch:
   - ppc64le
 distro: bionic
 before_script:
-  - apt install cmake build-essential clang llvm git linux-headers-generic libncurses-dev pkg-config autoconf libtool libelf-dev -y
+  - DEBIAN_FRONTEND=noninteractive apt install cmake build-essential clang llvm git linux-headers-generic libncurses-dev pkg-config autoconf libtool libelf-dev -y
 script:
   - make -j4 all
   - make tests
