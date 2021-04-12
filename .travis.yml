@@ -1,0 +1,11 @@
+language: cpp
+os: linux
+arch:
+  - amd64
+  - ppc64le
+distro: bionic
+before_script:
+  - apt install cmake build-essential clang llvm git linux-headers-generic libncurses-dev pkg-config autoconf libtool libelf-dev -y
+script:
+  - make -j4 all
+  - make tests
